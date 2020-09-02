@@ -68,9 +68,7 @@ class EmployeeListView: UITableView, UITableViewDataSource, UITableViewDelegate 
     }
     
     @objc private func settingsButtonAction(sender: UIButton){
-//        let buttonPosition : CGPoint = sender.convert(sender.bounds.origin, to: self)
-        let employee = employeeViewModelObj?.modelAt(sender.tag)
-        
+        let employee = employeeViewModelObj?.modelAt(sender.tag)        
         employeeDelegate?.employeeSelected(employee, onTap: sender)
     }
 }

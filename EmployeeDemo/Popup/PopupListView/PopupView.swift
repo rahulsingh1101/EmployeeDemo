@@ -81,7 +81,6 @@ class PopupView: UITableView,UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items?[indexPath.row]
-//        self.popupDelegate.selectedPopup(item: item!, selectedCellIndex: referenceView!.tag, index: indexPath.row)
         self.popupDelegate.selectedPopupWith(item: item!, parentCellIndex: referenceView!.tag, index: indexPath.row)
     }
 }

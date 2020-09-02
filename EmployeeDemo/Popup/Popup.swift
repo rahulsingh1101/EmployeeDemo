@@ -65,7 +65,6 @@ class Popup: UIView {
         }
         
         NSLayoutConstraint.activate([
-
             popup.widthAnchor.constraint(equalToConstant: popupTableViewWidth),
             popup.heightAnchor.constraint(equalToConstant: popupTableViewHeight),
         ])
@@ -89,7 +88,6 @@ class Popup: UIView {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         self.removeFromSuperview()
     }
-    
 }
 
 extension UIView{

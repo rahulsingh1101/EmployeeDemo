@@ -36,8 +36,6 @@ extension ViewController: EmployeeListDelegate{
 
 extension ViewController: PopupDelegate{
     func selectedPopupWith(item: Item, parentCellIndex: Int, index: Int) {
-        print("Selected :\(index)")
-        print("selectedCellIndex :\(parentCellIndex)")
         if index == 1 {
             self.employeeViewModel?.removeItemAt(parentCellIndex)
         }
