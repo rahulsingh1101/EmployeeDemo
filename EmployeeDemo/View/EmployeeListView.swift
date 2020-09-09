@@ -44,7 +44,7 @@ class EmployeeListView: UITableView, UITableViewDataSource, UITableViewDelegate 
     private func setupView(){
         self.delegate = self
         self.dataSource = self
-        self.register(UINib.init(nibName: Identifiers.shared.employeeCellIdentifier, bundle: nil), forCellReuseIdentifier: Identifiers.shared.employeeCellIdentifier)
+        self.register(UINib.init(nibName: EmployeeListViewCell.identifier, bundle: nil), forCellReuseIdentifier: EmployeeListViewCell.identifier)
         self.backgroundColor = .clear
         self.tableFooterView = UIView(frame: .zero)
     }
@@ -54,7 +54,7 @@ class EmployeeListView: UITableView, UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.shared.employeeCellIdentifier, for: indexPath) as! EmployeeListViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeListViewCell.identifier, for: indexPath) as! EmployeeListViewCell
         
         let employee = employeeViewModelObj?.modelAt(indexPath.row)
         cell.employeeName.text = employee?.employeeName
@@ -77,6 +77,4 @@ extension EmployeeListView: EmployeeViewModelCommunicatorDelegate{
     func refreshData() {
         self.reloadData()
     }
-    
-    
 }

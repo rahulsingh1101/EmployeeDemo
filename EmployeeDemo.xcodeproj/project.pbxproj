@@ -24,10 +24,8 @@
 		181916E024FF61180022DCC7 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181916DC24FF61170022DCC7 /* APIs.swift */; };
 		181916E124FF61180022DCC7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181916DD24FF61180022DCC7 /* ServiceManager.swift */; };
 		181916E324FF62FB0022DCC7 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181916E224FF62FB0022DCC7 /* EmployeeViewModel.swift */; };
-		181916E624FF6D480022DCC7 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181916E524FF6D480022DCC7 /* IndicatorView.swift */; };
 		181916EA24FF93150022DCC7 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181916E924FF93150022DCC7 /* Errors.swift */; };
 		18D464A724FF9A5D00DF3E0C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D464A624FF9A5D00DF3E0C /* Extensions.swift */; };
-		18D464A924FF9DC300DF3E0C /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D464A824FF9DC300DF3E0C /* Identifiers.swift */; };
 		5A62C5FACF4374FA8388F9BD /* Pods_EmployeeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E1EF31C85CE7359611B9E8 /* Pods_EmployeeDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +49,8 @@
 		181916DC24FF61170022DCC7 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		181916DD24FF61180022DCC7 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		181916E224FF62FB0022DCC7 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
-		181916E524FF6D480022DCC7 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		181916E924FF93150022DCC7 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		18D464A624FF9A5D00DF3E0C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		18D464A824FF9DC300DF3E0C /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		43DF70B8940DD6A5DDEAEBE4 /* Pods-EmployeeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeDemo.debug.xcconfig"; path = "Target Support Files/Pods-EmployeeDemo/Pods-EmployeeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		87B9B03AB80BC05B477D53E9 /* Pods-EmployeeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeDemo.release.xcconfig"; path = "Target Support Files/Pods-EmployeeDemo/Pods-EmployeeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E4E1EF31C85CE7359611B9E8 /* Pods_EmployeeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmployeeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +89,6 @@
 		181916AF24FF55860022DCC7 /* EmployeeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				181916E424FF6D270022DCC7 /* IndicatorView */,
 				181916D924FF60FC0022DCC7 /* Networking */,
 				181916D024FF5DC40022DCC7 /* Popup */,
 				181916C624FF569C0022DCC7 /* Modal */,
@@ -114,7 +109,6 @@
 		181916C424FF568C0022DCC7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18D464A824FF9DC300DF3E0C /* Identifiers.swift */,
 				181916C824FF57180022DCC7 /* EmployeeListView.swift */,
 				181916CC24FF58810022DCC7 /* EmployeeListViewCell.swift */,
 				181916CD24FF58810022DCC7 /* EmployeeListViewCell.xib */,
@@ -155,14 +149,6 @@
 				181916DC24FF61170022DCC7 /* APIs.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		181916E424FF6D270022DCC7 /* IndicatorView */ = {
-			isa = PBXGroup;
-			children = (
-				181916E524FF6D480022DCC7 /* IndicatorView.swift */,
-			);
-			path = IndicatorView;
 			sourceTree = "<group>";
 		};
 		181916EB24FF97520022DCC7 /* PopupListView */ = {
@@ -311,9 +297,7 @@
 			files = (
 				181916D724FF5DEA0022DCC7 /* PopupView.swift in Sources */,
 				181916D524FF5DEA0022DCC7 /* PopupCell.swift in Sources */,
-				18D464A924FF9DC300DF3E0C /* Identifiers.swift in Sources */,
 				181916E324FF62FB0022DCC7 /* EmployeeViewModel.swift in Sources */,
-				181916E624FF6D480022DCC7 /* IndicatorView.swift in Sources */,
 				181916C924FF57180022DCC7 /* EmployeeListView.swift in Sources */,
 				181916E124FF61180022DCC7 /* ServiceManager.swift in Sources */,
 				181916EA24FF93150022DCC7 /* Errors.swift in Sources */,

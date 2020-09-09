@@ -10,9 +10,10 @@ class EmployeeViewModel {
     private var employeeModels = [Employee]()
     weak var refreshDelegate: EmployeeViewModelCommunicatorDelegate?
     
-    init(url: String, controller:UIViewController) {
-        getEmployeesWith(url, controller: controller)
-    }
+//    init(controller:UIViewController) {
+//        //getEmployeesWith(url, controller: controller)
+//        let url = API.BASEURL+API.EMPLOYEES
+//    }
     
     func numberOfRows(_ section: Int) -> Int {
         return self.employeeModels.count
@@ -27,7 +28,8 @@ class EmployeeViewModel {
         refreshDelegate?.refreshData()
     }
     
-    func getEmployeesWith(_ url: String, controller:UIViewController){
+    func getEmployees(controller:UIViewController){
+        let url = API.BASEURL+API.EMPLOYEES
         ServiceManager.shared.request(type: EmployeeData.self, url: url, method: .get, controller: controller) { (result) in
             if result != nil && result?.data?.count ?? 0 > 0 {
                 DispatchQueue.main.async {

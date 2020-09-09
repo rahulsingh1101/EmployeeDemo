@@ -4,15 +4,13 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-    private var employeeViewModel: EmployeeViewModel?
+    private var employeeViewModel = EmployeeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = API.BASEURL+API.EMPLOYEES
-        self.employeeViewModel = EmployeeViewModel(url: url, controller: self)
-        
+                
         let employeeListViewObj = EmployeeListView()
-        employeeListViewObj.employeeViewModelObj = self.employeeViewModel!
+        employeeListViewObj.employeeViewModelObj = self.employeeViewModel
         employeeListViewObj.employeeDelegate = self
         self.view.addAutolayoutSubview(employeeListViewObj)
         
@@ -22,6 +20,8 @@ class ViewController: UIViewController {
             employeeListViewObj.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             employeeListViewObj.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
         ])
+        
+        self.employeeViewModel.getEmployees(controller: self)
     }
 }
 
@@ -37,7 +37,7 @@ extension ViewController: EmployeeListDelegate{
 extension ViewController: PopupDelegate{
     func selectedPopupWith(item: Item, parentCellIndex: Int, index: Int) {
         if index == 1 {
-            self.employeeViewModel?.removeItemAt(parentCellIndex)
+            self.employeeViewModel.removeItemAt(parentCellIndex)
         }
     }
 }

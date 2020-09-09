@@ -12,6 +12,8 @@ class Connectivity{
 class ServiceManager: NSObject {
     static let shared = ServiceManager()
     
+    private override init() { }
+    
     func request<T:Decodable>(type:T.Type, url: String, method: HTTPMethod, controller:UIViewController, completion completionHandler:@escaping(T?) -> Void) {
         if Connectivity.isConnectedToInternet() {
             var activityIndicator = UIActivityIndicatorView()
