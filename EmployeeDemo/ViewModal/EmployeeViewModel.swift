@@ -10,11 +10,6 @@ class EmployeeViewModel {
     private var employeeModels = [Employee]()
     weak var refreshDelegate: EmployeeViewModelCommunicatorDelegate?
     
-//    init(controller:UIViewController) {
-//        //getEmployeesWith(url, controller: controller)
-//        let url = API.BASEURL+API.EMPLOYEES
-//    }
-    
     func numberOfRows(_ section: Int) -> Int {
         return self.employeeModels.count
     }
